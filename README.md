@@ -13,3 +13,9 @@ The GitHub Repository for Vichesta'21 by Team Robonauts
 ### Exernal ROS Packages used:
 - ROS Navigation Stack https://github.com/ros-planning/navigation.git </br>
 - cmvision https://github.com/teshanshanuka/cmvision.git
+
+### Team Members
+- Sandeepan Ghosh
+- Chahak Jethani
+- Dhruv Agarwal
+- Aryaman Gupta
