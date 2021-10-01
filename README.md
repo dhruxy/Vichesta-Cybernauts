@@ -10,6 +10,10 @@ The GitHub Repository for Vichesta'21 by Team Robonauts
   ```
   roslaunch takshak all.launch
   ```
+- Open a new terminal and run the following command:
+  ```
+  rosrun takshak move.py
+  ```
 ### Exernal ROS Packages used:
 - ROS Navigation Stack https://github.com/ros-planning/navigation.git </br>
 - cmvision https://github.com/teshanshanuka/cmvision.git
