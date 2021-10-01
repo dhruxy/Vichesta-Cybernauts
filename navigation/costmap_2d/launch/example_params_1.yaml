@@ -1,0 +1,29 @@
+global_frame: map
+robot_base_frame: base_footprint
+transform_tolerance: 0.2
+robot_radius: 6
+footprint: [[-0.325, -0.325], [-0.325, 0.325], [0.325, 0.325], [0.46, 0.0], [0.325, -0.325]]
+
+update_frequency: 5.0
+publish_frequency: 1.0
+rolling_window: false
+
+width: 100
+height: 100
+resolution: 500
+origin_x: 0
+origin_y: 0
+
+plugins:
+  - {name: inflation, type: "costmap_2d::InflationLayer"}
+  - {name: static, type: "costmap_2d::StaticLayer"}
+
+static:
+  unknown_cost_value: -1
+  lethal_cost_threshold: 100
+  map_topic: map
+  trinary_costmap: false
+
+inflation:
+  inflation_radius: 0.55
+  cost_scaling_factor: 10.0
