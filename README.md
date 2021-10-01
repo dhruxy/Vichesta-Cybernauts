@@ -4,7 +4,7 @@ The GitHub Repository for Vichesta'21 by Team Robonauts
 
 ## Run the simulation
 
-- Clone this repository in the `src` folder of your catkin workspace.
+- Clone this repository/Download the Vichesta_Robonauts folder from drive [link](https://drive.google.com/drive/folders/1MSrlq-jMzMaWwUXjhpCX-cOlR_HxB57m?usp=sharing)  in the `src` folder of your catkin workspace.
 - Inside your workspace folder, run `catkin build`.
 - Open a terminal and run the following command to start the simulation:
   ```
@@ -20,7 +20,15 @@ The GitHub Repository for Vichesta'21 by Team Robonauts
 - We haven't hard coded the coloured boxes, aruco codes and coloured gates, instead, the approach is generalized. The order of coloured boxes, aruco markers and coloured gates can vary, and still the bot will get correct results.
 
 
-### Exernal ROS Packages used:
+### Exernal ROS Packages and Dependencies used:
 - ROS Navigation Stack https://github.com/ros-planning/navigation.git </br>
 - cmvision https://github.com/teshanshanuka/cmvision.git
 - cv_bridge https://github.com/ros-perception/vision_opencv.git
+- wxWidgets (cmvision dependency)
+```
+sudo apt install --no-install-recommends -y \
+libgtk-3-dev  \
+wx3.0-headers \
+libwxgtk3.0-gtk3-dev
+
+```
