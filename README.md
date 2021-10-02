@@ -35,3 +35,9 @@ libgtk-3-dev  \
 wx3.0-headers \
 libwxgtk3.0-gtk3-dev
 ```
+### Total Simulation Time:
+Total simulation time taken by our bot to compete the task-
+
+Script start time(can be verified from the terminal and gazebo in video)-21 s 965 ms   
+Script end time(can be verified from the terminal and gazebo in video)-241 s 316 ms or 4 mins 01 s 316 ms   
+Approximately=3 mins and 39 secs
