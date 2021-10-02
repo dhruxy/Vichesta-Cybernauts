@@ -208,6 +208,8 @@ def findArucoMarkers(img, markerSize = 6, totalMarkers=250, draw=True):
     aruco.drawDetectedMarkers(img, corners)
     if ids is not None:
 #        print(ids)
+        if len(ids)!=5:
+            return False
         aid=[]
         ax=[]
         for i in range(5):
@@ -259,6 +261,7 @@ def findArucoMarkers(img, markerSize = 6, totalMarkers=250, draw=True):
           j=i
     mp[aid[j]]='purple'
     print("Map of id vs color= ",mp)
+    return True
     
 def get_img(i):
    global count1,count2,count3,redx,redy,yellowx,yellowy,bluex,bluey,green
@@ -278,7 +281,11 @@ def get_img(i):
          count2=max(count2,blo.blob_count)
          print("Count2=",count2)
      elif i==0:
-        findArucoMarkers(img)
+        t=findArucoMarkers(img)
+        if t==False:
+          data = rospy.wait_for_message("/camera/color/image_raw",Image)
+          img = bridge.imgmsg_to_cv2(data, "bgr8")
+          t=findArucoMarkers(img)
      elif i==4:
          gatecolor(img)
          cv2.imwrite("gates.jpg",img)
@@ -289,9 +296,16 @@ def get_img(i):
    except CvBridgeError as e:
       print(e)
 
+c=0
 def callback(data):
-     global count3
-     count3=max(count3,data.blob_count)
+     global count3,c
+     if data.blob_count>count3:
+        c+=1
+     else:
+        c=0
+     if c>8:
+       count3=max(count3,data.blob_count)
+       c=0
      print("Count3=",count3)
        
 try:
@@ -299,9 +313,9 @@ try:
     get_img(1)
     move(1.4062520265579224,-8.341598510742188,0.741779729145153,0.6706435964275984)
     get_img(1)
-    move(-0.86820220947265625,-8.256216049194336, 0.999997709942646,0.0021401190302485695)
+    move(-0.36798763275146484,-8.188644409179688, 0.999997709942646,0.0021401190302485695)
     get_img(2)
-    move(-4.458727836608887,-4.608456134796143,-0.7087644218845909,0.7054452454093101)
+    move(-3.658727836608887,-4.558456134796143,-0.7087644218845909,0.7054452454093101)
     get_img(2)
     move(-10.380690574645996,-2.2751665115356445,0.5212666074192941,0.8533938856059256)
     get_img(0)
@@ -310,24 +324,24 @@ try:
     blo_sub=rospy.Subscriber("/blobs",Blobs,callback)
     move(1.389301061630249,-0.6601300239562988,0.621855439574967,0.7831320528946727)
 #    get_img(3)
-    move(3.5313239097595215,0.8491373062133789,0.7159773738002765,0.6981234849265989)
+#    move(3.5313239097595215,0.8491373062133789,0.7159773738002765,0.6981234849265989)
 #    get_img(3)
-    move(5.749654769897461,4.587042331695557,-0.9999896192038987,0.004556477196423803)
+    move(5.929654769897461,4.787042331695557,-0.9999896192038987,0.004556477196423803)
 #    get_img(3)
-    move(5.03737154006958,7.531535873413086,-0.8957202121513852,0.44461815251232994)
+    move(5.921184062957764,7.6609578132629395,-0.9382660843857703,0.34591437508637096)
 #    get_img(3)
     blo_sub.unregister()
-    move(5.278335094451904,6.775717735290527,0.0,0.1)
+    move(5.637727737426758,5.230498123168945,0.0,0.1)
     count=count1+count2+count3
     print("Final Count= ",count)
     count=count%5
     print("Required gate color= ",mp[count])
     #col=['red','yellow','blue','green','purple']
-    gates=[-2.3067851066589355,0.21936416625976562,2.6673340797424316,5.252288818359375,7.8068037033081055,-1.9669203758239746,0.4780440330505371,2.924586057662964,5.667872428894043,8.082221984863281]
+    gates=[-2.3067851066589355,0.21936416625976562,2.6673340797424316,5.252288818359375,7.8068037033081055,-1.3669203758239746,0.4780440330505371,2.924586057662964,5.667872428894043,8.082221984863281]
     if mp[count]=='red':
       ind=col.index('red')
       move(8.999160766601562,gates[ind],0.015599107972384582,0.9998783265130142)
-      move(12.011744499206543,gates[ind+5],0.02098140376705208,0.9997798661185191)
+      move(11.855231285095215,gates[ind+5],0.13901939821610043,0.9902896580898103)
     elif mp[count]=='yellow':
       ind=col.index('yellow')
       move(8.999160766601562,gates[ind],0.015599107972384582,0.9998783265130142)
@@ -342,9 +356,9 @@ try:
       move(12.011744499206543,gates[ind+5],0.02098140376705208,0.9997798661185191)
     elif mp[count]=='purple':
       ind=col.index('purple')
-      move(8.999160766601562,gates[ind],0.015599107972384582,0.9998783265130142)
+      move(9.664801597595215,gates[ind],0.015599107972384582,0.9998783265130142)
       move(12.011744499206543,gates[ind+5],0.02098140376705208,0.9997798661185191)
- 
+    rospy.loginfo("Task completed")
     rospy.spin()
 except KeyboardInterrupt:
     print("Shutting down")
