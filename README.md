@@ -1,10 +1,10 @@
-# Vichesta-Robonauts
+# Vichesta-Cybernauts
 
-The GitHub Repository for Vichesta'21 by Team Robonauts
+The GitHub Repository for Vichesta'21 by Team Cybernauts
 
 ## Run the simulation
 
-- Clone this repository/Download the Vichesta_Robonauts folder from drive [link](https://drive.google.com/drive/folders/1MSrlq-jMzMaWwUXjhpCX-cOlR_HxB57m?usp=sharing)  in the `src` folder of your catkin workspace.
+- Clone this repository/Download the Vichesta_Cybernauts folder from drive [link](https://drive.google.com/drive/folders/1MSrlq-jMzMaWwUXjhpCX-cOlR_HxB57m?usp=sharing)  in the `src` folder of your catkin workspace.
 - Inside your workspace folder, run `catkin build`.
 - Open a terminal and run the following command to start the simulation:
   ```
