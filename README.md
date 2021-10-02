@@ -34,5 +34,4 @@ sudo apt install --no-install-recommends -y \
 libgtk-3-dev  \
 wx3.0-headers \
 libwxgtk3.0-gtk3-dev
-
 ```
