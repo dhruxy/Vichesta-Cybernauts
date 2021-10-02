@@ -38,6 +38,6 @@ libwxgtk3.0-gtk3-dev
 ### Total Simulation Time:
 Total simulation time taken by our bot to compete the task-
 
-Script start time(can be verified from the terminal and gazebo in video)-21 s 965 ms   
-Script end time(can be verified from the terminal and gazebo in video)-241 s 316 ms or 4 mins 01 s 316 ms   
-Approximately=3 mins and 39 secs
+Script start time(can be verified from the terminal and gazebo in video)-12 s 581 ms   
+Script end time(can be verified from the terminal and gazebo in video)-212 s 152 ms or 3 mins 32 s 152 ms   
+Approximately=3 mins and 20 s
