@@ -1,6 +1,6 @@
 # Vichesta-Cybernauts
 
-The GitHub Repository for Vichesta'21 by Team Cybernauts
+The GitHub Repository of Team Cybernauts for Vichesta'21, a ROS event by IIT Dhanbad, where we bagged third position
 
 ## Run the simulation
 
