@@ -48,13 +48,5 @@ Approximately=3 mins and 20 s
      <a href="https://github.com/phoenixrider12">
     <img src="https://avatars.githubusercontent.com/u/76533398?s=460&v=4" width="100px;" alt=""/><br /><sub><b>Aryaman Gupta</b></sub></a><br />
 	</td>
-<td align="center">
-     <a href="https://github.com/san2130">
-    <img src="https://avatars.githubusercontent.com/u/77744383?s=460&v=4" width="100px;" alt=""/><br /><sub><b>Sandeepan Ghosh</b></sub></a><br />
-	</td>
-    <td align="center">
-     <a href="https://github.com/dhruxy">
-    <img src="https://avatars.githubusercontent.com/u/76437900?s=460&v=4" width="100px;" alt=""/><br /><sub><b>Dhruv Agarwal</b></sub></a><br />
-	</td>
 
 </table>
