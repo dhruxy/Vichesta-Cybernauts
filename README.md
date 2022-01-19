@@ -41,12 +41,3 @@ Total simulation time taken by our bot to compete the task-
 Script start time(can be verified from the terminal and gazebo in video)-12 s 581 ms   
 Script end time(can be verified from the terminal and gazebo in video)-212 s 152 ms or 3 mins 32 s 152 ms   
 Approximately=3 mins and 20 s
-
-## Team
-<table>
-	<td align="center">
-     <a href="https://github.com/phoenixrider12">
-    <img src="https://avatars.githubusercontent.com/u/76533398?s=460&v=4" width="100px;" alt=""/><br /><sub><b>Aryaman Gupta</b></sub></a><br />
-	</td>
-
-</table>
