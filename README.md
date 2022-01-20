@@ -57,6 +57,10 @@ Approximately=3 mins and 20 s
      <a href="https://github.com/dhruxy">
     <img src="https://avatars.githubusercontent.com/u/84787793?v=4" width="100px;" alt=""/><br /><sub><b>Dhruv Agarwal</b></sub></a><br />
 	</td>
+<td align="center">
+     <a href="https://github.com/sherlockholmes1603">
+    <img src="https://avatars.githubusercontent.com/u/77875542?v=4" width="100px;" alt=""/><br /><sub><b>Chahak Jethani</b></sub></a><br />
+	</td>
 
 
 </table>
