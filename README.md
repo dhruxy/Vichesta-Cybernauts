@@ -43,7 +43,7 @@ Script end time(can be verified from the terminal and gazebo in video)-212 s 152
 Approximately=3 mins and 20 s
 
 
-## Team
+### Team
 <table>
 	<td align="center">
      <a href="https://github.com/phoenixrider12">
